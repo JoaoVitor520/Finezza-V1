@@ -1,98 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Finezza Odontologia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              primary: {
-                DEFAULT: '#13ecec',
-                dark: '#0ea5a5',
-                light: '#e0fcfc'
-              },
-              secondary: '#111818',
-              background: {
-                light: '#f8fafc', // Slightly cooler white
-                dark: '#102222'
-              },
-              surface: {
-                light: '#ffffff',
-                dark: '#1a2c2c'
-              },
-              text: {
-                main: '#1e293b',
-                secondary: '#64748b',
-                muted: '#94a3b8'
-              }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finezza Odontologia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#13ecec',
+              dark: '#0ea5a5',
+              light: '#e0fcfc'
             },
-            fontFamily: {
-              sans: ['Manrope', 'sans-serif'],
-              display: ['Manrope', 'sans-serif'],
+            secondary: '#111818',
+            background: {
+              light: '#f8fafc', // Slightly cooler white
+              dark: '#102222'
             },
-            boxShadow: {
-              'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
-              'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
-              'glow': '0 0 20px rgba(19, 236, 236, 0.3)'
+            surface: {
+              light: '#ffffff',
+              dark: '#1a2c2c'
             },
-            animation: {
-              'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
-              'slide-in-right': 'slideInRight 0.4s ease-out forwards',
-              'scale-in': 'scaleIn 0.3s ease-out forwards',
-              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            text: {
+              main: '#1e293b',
+              secondary: '#64748b',
+              muted: '#94a3b8'
+            }
+          },
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif'],
+            display: ['Manrope', 'sans-serif'],
+          },
+          boxShadow: {
+            'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+            'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+            'glow': '0 0 20px rgba(19, 236, 236, 0.3)'
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+            'slide-in-right': 'slideInRight 0.4s ease-out forwards',
+            'scale-in': 'scaleIn 0.3s ease-out forwards',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
             },
-            keyframes: {
-              fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(20px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              slideInRight: {
-                '0%': { opacity: '0', transform: 'translateX(20px)' },
-                '100%': { opacity: '1', transform: 'translateX(0)' },
-              },
-              scaleIn: {
-                '0%': { opacity: '0', transform: 'scale(0.95)' },
-                '100%': { opacity: '1', transform: 'scale(1)' },
-              }
+            slideInRight: {
+              '0%': { opacity: '0', transform: 'translateX(20px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            scaleIn: {
+              '0%': { opacity: '0', transform: 'scale(0.95)' },
+              '100%': { opacity: '1', transform: 'scale(1)' },
             }
           }
         }
       }
-    </script>
-    <style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        display: inline-block;
-        vertical-align: middle;
-      }
-      .icon-filled {
-        font-variation-settings: 'FILL' 1;
-      }
-      .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-      }
-      .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-      }
-      .glass-card {
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.8);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-      }
-      body {
-        background-image: radial-gradient(circle at 10% 20%, rgb(240, 253, 253) 0%, rgb(248, 250, 252) 90%);
-      }
-    </style>
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .icon-filled {
+      font-variation-settings: 'FILL' 1;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    body {
+      background-image: radial-gradient(circle at 10% 20%, rgb(240, 253, 253) 0%, rgb(248, 250, 252) 90%);
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -103,7 +111,10 @@
 }
 </script>
 </head>
-  <body class="text-text-main font-sans antialiased h-screen overflow-hidden selection:bg-primary/30">
-    <div id="root" class="h-full"></div>
-  </body>
+
+<body class="text-text-main font-sans antialiased h-screen overflow-hidden selection:bg-primary/30">
+  <div id="root" class="h-full"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
 </html>
